@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Klayi for macOS | QMK Keyboard Layout Indicator for Svalboard and Moonlander</title>
+    <meta
+      name="description"
+      content="Klayi is a macOS keyboard layout indicator for Svalboard and Moonlander. See the active QMK layer and modifiers in your menu bar, with up to 15 custom-named and color-coded layers."
+    >
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://klayi.ca/">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/32x32.png">
+    <link rel="apple-touch-icon" href="assets/128x128.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Klayi for macOS">
+    <meta
+      property="og:description"
+      content="Keyboard layout indicator for macOS with live QMK layer and modifier visibility for Svalboard and Moonlander."
+    >
+    <meta property="og:url" content="https://klayi.ca/">
+    <meta property="og:image" content="https://klayi.ca/assets/1024x1024.png">
+    <meta property="og:image:alt" content="Klayi logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Klayi for macOS">
+    <meta
+      name="twitter:description"
+      content="Live QMK layer and modifier visibility in the macOS status bar for Svalboard and Moonlander."
+    >
+    <meta name="twitter:image" content="https://klayi.ca/assets/1024x1024.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Klayi",
+        "operatingSystem": "macOS",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "Klayi is a macOS keyboard layout indicator that shows the active QMK layer and current modifiers in the status bar for supported keyboards.",
+        "url": "https://klayi.ca/",
+        "downloadUrl": "https://apps.apple.com/us/app/klayi/id6743553507",
+        "image": "https://klayi.ca/assets/1024x1024.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Nomi Solutions"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://apps.apple.com/us/app/klayi/id6743553507",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Klayi home">
+          <img class="brand__logo" src="assets/128x128.png" alt="Klayi logo">
+          <span class="brand__text">Klayi</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#support">Support</a>
+          <a href="#privacy">Privacy</a>
+          <a class="button button--nav" href="https://apps.apple.com/us/app/klayi/id6743553507">Buy</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero section">
+          <div class="hero__copy">
+            <p class="eyebrow">macOS utility for custom keyboards</p>
+            <h1>Klayi keeps your active QMK layer visible.</h1>
+            <p class="hero__lede">
+              Klayi connects to supported keyboards over USB and shows the current
+              layer and active modifiers directly in the macOS status bar. It is
+              built for people who switch layers often and want immediate visual
+              confirmation without breaking flow.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="https://apps.apple.com/us/app/klayi/id6743553507">Buy on the App Store</a>
+              <a class="button button--secondary" href="#supported">View supported keyboards</a>
+            </div>
+            <ul class="hero__facts" aria-label="Key facts">
+              <li>Supports Svalboard and Moonlander</li>
+              <li>Reads active QMK layer and modifier state</li>
+              <li>Up to 15 custom-named, color-coded layers</li>
+            </ul>
+          </div>
+
+          <div class="hero__visual">
+            <div class="hero-card hero-card--stack">
+              <div class="hero-card__masthead">
+                <img src="assets/256x256.png" alt="Klayi logo" class="hero-card__logo">
+                <div>
+                  <p class="hero-card__title">Status bar visibility</p>
+                  <p class="hero-card__subtitle">Always know which layer is active.</p>
+                </div>
+              </div>
+              <div class="status-preview" aria-hidden="true">
+                <div class="status-preview__bar">
+                  <span class="status-chip status-chip--layer status-chip--combined">⌘⇧ Base</span>
+                </div>
+                <div class="status-preview__panel">
+                  <div class="status-preview__row">
+                    <span>Keyboard</span>
+                    <strong>Moonlander</strong>
+                  </div>
+                  <div class="status-preview__row">
+                    <span>Current layer</span>
+                    <strong>Base</strong>
+                  </div>
+                  <div class="status-preview__row">
+                    <span>Modifiers</span>
+                    <strong>⌘⇧</strong>
+                  </div>
+                  <div class="status-preview__row">
+                    <span>Protocol</span>
+                    <strong>QMK over USB</strong>
+                  </div>
+                </div>
+                <div class="layer-list">
+                  <div class="layer-list__item">
+                    <span>0 Base</span>
+                    <span class="layer-swatch layer-swatch--violet"></span>
+                  </div>
+                  <div class="layer-list__item">
+                    <span>1 Num</span>
+                    <span class="layer-swatch layer-swatch--amber"></span>
+                  </div>
+                  <div class="layer-list__item">
+                    <span>2 Mouse</span>
+                    <span class="layer-swatch layer-swatch--coral"></span>
+                  </div>
+                  <div class="layer-list__item layer-list__item--placeholder">
+                    <span>+ up to 15 layers</span>
+                    <span class="layer-swatch layer-swatch--blue"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--feature-grid" id="features">
+          <div class="section-heading">
+            <p class="eyebrow">Why use it</p>
+            <h2>Built for fast feedback, not guesswork.</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Menu bar visibility</h3>
+              <p>
+                The current layer and modifier state stay visible in the macOS
+                status bar, which makes mode changes easier to trust during normal work.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Layer naming and color coding</h3>
+              <p>
+                Configure up to 15 layers with short custom names and distinct
+                colors, so your keyboard state is recognizable at a glance.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>USB connection, direct signal</h3>
+              <p>
+                Klayi reads state from supported keyboards over USB instead of
+                relying on memory or assumptions about what layer should be active.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section real-app" id="real-app">
+          <div class="section-heading">
+            <p class="eyebrow">Real app</p>
+            <h2>What Klayi looks like on a real macOS desktop.</h2>
+            <p>
+              This is the actual application interface: the menu bar indicator,
+              the popup state panel, layer list, and settings windows as they
+              appear in use.
+            </p>
+          </div>
+          <figure class="real-app-shot">
+            <img
+              src="assets/real.png"
+              alt="Real Klayi application screenshot showing the macOS menu bar indicator, popup, layers window, and settings window"
+            >
+            <figcaption>
+              Live layer visibility in the status bar, layer management, and settings in one lightweight macOS utility.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="section workflow">
+          <div class="section-heading">
+            <p class="eyebrow">How it fits</p>
+            <h2>Useful when layers are part of the job.</h2>
+          </div>
+          <div class="workflow-grid">
+            <article class="workflow-step">
+              <span class="workflow-step__index">01</span>
+              <h3>Connect your keyboard</h3>
+              <p>Klayi listens to supported boards over USB and surfaces live state inside macOS.</p>
+            </article>
+            <article class="workflow-step">
+              <span class="workflow-step__index">02</span>
+              <h3>Name your layers</h3>
+              <p>Assign compact labels and color chips in settings so the state shown in the menu bar maps to your real layout design.</p>
+            </article>
+            <article class="workflow-step">
+              <span class="workflow-step__index">03</span>
+              <h3>Stop second-guessing layer changes</h3>
+              <p>See the active layer and modifier combination before a shortcut or symbol lands in the wrong context.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="setup">
+          <div class="section-heading">
+            <p class="eyebrow">Minimal setup</p>
+            <h2>Flash once, then Klayi can read live layer state.</h2>
+            <p>
+              Setup is intentionally small. To use Klayi with a supported keyboard,
+              flash that keyboard with the Klayi-compatible fork of its official
+              firmware, connect it over USB, and Klayi will surface the current
+              QMK layer and active modifiers in the macOS status bar.
+            </p>
+          </div>
+          <div class="supported-grid">
+            <article class="supported-card">
+              <div class="supported-card__topline">Step 1</div>
+              <h3>Use the firmware fork for your keyboard</h3>
+              <p>
+                Each supported board has a dedicated firmware fork to expose the
+                layer state Klayi needs.
+              </p>
+              <div class="link-list">
+                <a href="https://github.com/nomisolutions/vial-qmk">Svalboard firmware fork on GitHub</a>
+                <a href="https://github.com/nomisolutions/qmk_firmware">Moonlander firmware fork on GitHub</a>
+              </div>
+            </article>
+            <article class="supported-card">
+              <div class="supported-card__topline">Step 2</div>
+              <h3>Flash your keyboard</h3>
+              <p>
+                Once the compatible firmware is flashed, Klayi can read live state
+                over USB without additional runtime setup.
+              </p>
+              <span class="supported-card__note">This is a one-time device setup, not a recurring workflow.</span>
+            </article>
+            <article class="supported-card">
+              <div class="supported-card__topline">Step 3</div>
+              <h3>Use the overview video as a guide</h3>
+              <p>
+                The current YouTube overview also includes a guide for flashing a
+                Moonlander, so new users can follow one walkthrough from setup to use.
+              </p>
+              <a href="https://www.youtube.com/watch?v=w17R7r-vV_U">Open the flashing and overview video</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="supported">
+          <div class="section-heading">
+            <p class="eyebrow">Supported hardware</p>
+            <h2>Current keyboard and firmware support.</h2>
+            <p>
+              Klayi currently supports Svalboard and Moonlander and reads layer data
+              from their QMK firmware integration. The site does not claim broad
+              compatibility with every QMK-powered keyboard.
+            </p>
+          </div>
+          <div class="supported-grid">
+            <article class="supported-card">
+              <div class="supported-card__topline">Supported keyboard</div>
+              <h3>Svalboard</h3>
+              <p>Custom ergonomic board support with live layer visibility in the status bar.</p>
+              <div class="link-list">
+                <a href="https://svalboard.com">Visit svalboard.com</a>
+                <a href="https://github.com/nomisolutions/vial-qmk">Firmware fork on GitHub</a>
+              </div>
+            </article>
+            <article class="supported-card">
+              <div class="supported-card__topline">Supported keyboard</div>
+              <h3>Moonlander</h3>
+              <p>Designed to work with Moonlander setups that expose layer state through QMK.</p>
+              <div class="link-list">
+                <a href="https://www.zsa.io/moonlander">Visit zsa.io/moonlander</a>
+                <a href="https://github.com/nomisolutions/qmk_firmware">Firmware fork on GitHub</a>
+              </div>
+            </article>
+            <article class="supported-card supported-card--firmware">
+              <div class="supported-card__topline">Firmware</div>
+              <h3>QMK-aware</h3>
+              <p>Klayi reads the active layer and current modifiers from supported firmware behavior over USB.</p>
+              <span class="supported-card__note">Specific support is limited to the keyboards listed above.</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="section video" id="video">
+          <div class="section-heading">
+            <p class="eyebrow">Video overview</p>
+            <h2>See the app in use before you install it.</h2>
+          </div>
+          <a class="video-card" href="https://www.youtube.com/watch?v=w17R7r-vV_U">
+            <div class="video-card__poster" aria-hidden="true">
+              <div class="video-card__play">▶</div>
+            </div>
+            <div class="video-card__content">
+              <h3>Klayi overview on YouTube</h3>
+              <p>
+                Open the current overview video to see how Klayi reports active
+                layers and modifiers in the macOS status bar, and to follow the
+                Moonlander flashing guide included in the walkthrough.
+              </p>
+              <span class="video-card__link">Watch on YouTube</span>
+            </div>
+          </a>
+        </section>
+
+        <section class="section privacy" id="privacy">
+          <div class="section-heading">
+            <p class="eyebrow">Privacy</p>
+            <h2>No accounts, no analytics, no telemetry.</h2>
+            <p>
+              Klayi is a local macOS utility. It does not collect personal data,
+              run analytics, phone home for telemetry, or require an account to work.
+            </p>
+          </div>
+          <div class="privacy-grid">
+            <article class="privacy-card">
+              <h3>Collected data</h3>
+              <p>None.</p>
+            </article>
+            <article class="privacy-card">
+              <h3>Analytics</h3>
+              <p>None.</p>
+            </article>
+            <article class="privacy-card">
+              <h3>Telemetry</h3>
+              <p>None.</p>
+            </article>
+            <article class="privacy-card">
+              <h3>Account requirement</h3>
+              <p>No account required.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section support" id="support">
+          <div class="section-heading">
+            <p class="eyebrow">Support</p>
+            <h2>Questions, issues, or feature requests go through GitHub.</h2>
+            <p>
+              The public repository is the support channel for issues, documentation,
+              and future development updates.
+            </p>
+          </div>
+          <div class="support-panel">
+            <img src="assets/64x64.png" alt="Klayi logo" class="support-panel__logo">
+            <div>
+              <h3>Klayi on GitHub</h3>
+              <p>Open the project repository for support and project details.</p>
+            </div>
+            <a class="button button--primary" href="https://github.com/nomisolutions/klayi">Open GitHub project</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__brand">
+          <img src="assets/64x64.png" alt="Klayi logo">
+          <div>
+            <strong>Klayi</strong>
+            <p>Keyboard layout indicator for macOS.</p>
+          </div>
+        </div>
+        <div class="site-footer__links">
+          <a href="https://apps.apple.com/us/app/klayi/id6743553507">App Store</a>
+          <a href="https://github.com/nomisolutions/klayi">GitHub</a>
+          <a href="#privacy">Privacy</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
