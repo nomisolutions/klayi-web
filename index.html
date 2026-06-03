@@ -6,7 +6,7 @@
     <title>Klayi for macOS | QMK Keyboard Layout Indicator for Svalboard and Moonlander</title>
     <meta
       name="description"
-      content="Klayi is a macOS keyboard layout indicator for Svalboard and Moonlander. See the active QMK layer and modifiers in your menu bar, with up to 15 custom-named and color-coded layers."
+      content="Klayi is a macOS keyboard layout indicator for Svalboard and Moonlander. See the active layer and modifiers in your menu bar, configure layer-aware plugins, and use Moonlander out of the box through the Oryx protocol."
     >
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://klayi.ca/">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Klayi for macOS">
     <meta
       property="og:description"
-      content="Keyboard layout indicator for macOS with live QMK layer and modifier visibility for Svalboard and Moonlander."
+      content="Keyboard layout indicator for macOS with live layer visibility, plugins, and Moonlander support through the Oryx protocol."
     >
     <meta property="og:url" content="https://klayi.ca/">
     <meta property="og:image" content="https://klayi.ca/assets/1024x1024.png">
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Klayi for macOS">
     <meta
       name="twitter:description"
-      content="Live QMK layer and modifier visibility in the macOS status bar for Svalboard and Moonlander."
+      content="Live layer and modifier visibility, layer-triggered plugins, on Moonlander and Svalboard."
     >
     <meta name="twitter:image" content="https://klayi.ca/assets/1024x1024.png">
     <link rel="stylesheet" href="styles.css">
@@ -37,7 +37,7 @@
         "name": "Klayi",
         "operatingSystem": "macOS",
         "applicationCategory": "UtilitiesApplication",
-        "description": "Klayi is a macOS keyboard layout indicator that shows the active QMK layer and current modifiers in the status bar for supported keyboards.",
+        "description": "Klayi is a macOS keyboard layout indicator that shows the active layer and current modifiers in the status bar for supported keyboards and can trigger plugins from assigned layers.",
         "url": "https://klayi.ca/",
         "downloadUrl": "https://apps.apple.com/us/app/klayi/id6743553507",
         "image": "https://klayi.ca/assets/1024x1024.png",
@@ -62,6 +62,7 @@
         </a>
         <nav class="site-nav" aria-label="Primary">
           <a href="#features">Features</a>
+          <a href="#plugins">Plugins</a>
           <a href="#support">Support</a>
           <a href="#privacy">Privacy</a>
           <a class="button button--nav" href="https://apps.apple.com/us/app/klayi/id6743553507">Buy</a>
@@ -72,12 +73,12 @@
         <section class="hero section">
           <div class="hero__copy">
             <p class="eyebrow">macOS utility for custom keyboards</p>
-            <h1>Klayi keeps your active QMK layer visible.</h1>
+            <h1>Klayi keeps your active keyboard layer visible.</h1>
             <p class="hero__lede">
-              Klayi connects to supported keyboards over USB and shows the current
-              layer and active modifiers directly in the macOS status bar. It is
-              built for people who switch layers often and want immediate visual
-              confirmation without breaking flow.
+              Klayi connects to supported keyboards and shows the current layer
+              and active modifiers directly in the macOS status bar. It can also
+              trigger plugins from assigned layers, so layer changes can open
+              focused tools without breaking flow.
             </p>
             <div class="hero__actions">
               <a class="button button--primary" href="https://apps.apple.com/us/app/klayi/id6743553507">Buy on the App Store</a>
@@ -86,6 +87,8 @@
             <ul class="hero__facts" aria-label="Key facts">
               <li>Supports Svalboard and Moonlander</li>
               <li>Reads active QMK layer and modifier state</li>
+              <li>Moonlander works out of the box via the Oryx protocol</li>
+              <li>Layer-triggered plugins for focused workflows</li>
               <li>Up to 15 custom-named, color-coded layers</li>
             </ul>
           </div>
@@ -118,7 +121,11 @@
                   </div>
                   <div class="status-preview__row">
                     <span>Protocol</span>
-                    <strong>QMK over USB</strong>
+                    <strong>Oryx over USB</strong>
+                  </div>
+                  <div class="status-preview__row">
+                    <span>Plugin</span>
+                    <strong>Clipboard</strong>
                   </div>
                 </div>
                 <div class="layer-list">
@@ -147,7 +154,7 @@
         <section class="section section--feature-grid" id="features">
           <div class="section-heading">
             <p class="eyebrow">Why use it</p>
-            <h2>Built for fast feedback, not guesswork.</h2>
+            <h2>Built for fast feedback.</h2>
           </div>
           <div class="feature-grid">
             <article class="feature-card">
@@ -169,6 +176,13 @@
               <p>
                 Klayi reads state from supported keyboards over USB instead of
                 relying on memory or assumptions about what layer should be active.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Layer-triggered plugins</h3>
+              <p>
+                Assign a plugin to a layer and Klayi signals to it when the keyboard
+                switches to that layer.
               </p>
             </article>
           </div>
@@ -213,54 +227,55 @@
             </article>
             <article class="workflow-step">
               <span class="workflow-step__index">03</span>
-              <h3>Stop second-guessing layer changes</h3>
+              <h3>See layer changes</h3>
               <p>See the active layer and modifier combination before a shortcut or symbol lands in the wrong context.</p>
             </article>
           </div>
         </section>
 
-        <section class="section" id="setup">
+        <section class="section" id="plugins">
           <div class="section-heading">
-            <p class="eyebrow">Minimal setup</p>
-            <h2>Flash once, then Klayi can read live layer state.</h2>
+            <p class="eyebrow">Plugins</p>
+            <h2>Turn layer switches into app actions.</h2>
             <p>
-              Setup is intentionally small. To use Klayi with a supported keyboard,
-              flash that keyboard with the Klayi-compatible fork of its official
-              firmware, connect it over USB, and Klayi will surface the current
-              QMK layer and active modifiers in the macOS status bar.
+              A plugin is triggered when your keyboard switches to the layer
+              assigned to it. For example, the clipboard history plugin opens an
+              overlay where you can choose an item from your clipboard history
+              and paste it back into the active app.
             </p>
           </div>
           <div class="supported-grid">
             <article class="supported-card">
-              <div class="supported-card__topline">Step 1</div>
-              <h3>Use the firmware fork for your keyboard</h3>
+              <div class="supported-card__topline">Plugin</div>
+              <h3>Clipboard history</h3>
               <p>
-                Each supported board has a dedicated firmware fork to expose the
-                layer state Klayi needs.
+                Switch to the assigned layer to show a clipboard history overlay,
+                select an entry, and paste it without leaving the keyboard flow.
               </p>
-              <div class="link-list">
-                <a href="https://github.com/nomisolutions/vial-qmk">Svalboard firmware fork on GitHub</a>
-                <a href="https://github.com/nomisolutions/qmk_firmware">Moonlander firmware fork on GitHub</a>
-              </div>
             </article>
             <article class="supported-card">
-              <div class="supported-card__topline">Step 2</div>
-              <h3>Flash your keyboard</h3>
+              <div class="supported-card__topline">Plugin</div>
+              <h3>Training layer</h3>
               <p>
-                Once the compatible firmware is flashed, Klayi can read live state
-                over USB without additional runtime setup.
+                Switch to the assigned layer to show a training layer overlay, press any key on your keyboard, see it activate in the overlay.
               </p>
-              <span class="supported-card__note">This is a one-time device setup, not a recurring workflow.</span>
             </article>
-            <article class="supported-card">
-              <div class="supported-card__topline">Step 3</div>
-              <h3>Use the overview video as a guide</h3>
-              <p>
-                The current YouTube overview also includes a guide for flashing a
-                Moonlander, so new users can follow one walkthrough from setup to use.
-              </p>
-              <a href="https://www.youtube.com/watch?v=w17R7r-vV_U">Open the flashing and overview video</a>
-            </article>
+          </div>
+          <div class="plugin-screenshots" aria-label="Plugin screenshots">
+            <figure class="plugin-screenshot">
+              <img
+                src="assets/clipboard-history.png"
+                alt="Klayi clipboard history plugin overlay showing clipboard items to select and paste"
+              >
+              <figcaption>Trigger clipboard history from the assigned layer.</figcaption>
+            </figure>
+            <figure class="plugin-screenshot">
+              <img
+                src="assets/training-layer.png"
+                alt="Klayi training layer plugin overlay showing active keyboard input"
+              >
+              <figcaption>Switch to the training layer to see key presses in an overlay.</figcaption>
+            </figure>
           </div>
         </section>
 
@@ -269,16 +284,16 @@
             <p class="eyebrow">Supported hardware</p>
             <h2>Current keyboard and firmware support.</h2>
             <p>
-              Klayi currently supports Svalboard and Moonlander and reads layer data
-              from their QMK firmware integration. The site does not claim broad
-              compatibility with every QMK-powered keyboard.
+              Klayi currently supports Svalboard and Moonlander. Moonlander works
+              out of the box via the Oryx protocol, while Svalboard uses a
+              QMK firmware integration.
             </p>
           </div>
           <div class="supported-grid">
             <article class="supported-card">
               <div class="supported-card__topline">Supported keyboard</div>
               <h3>Svalboard</h3>
-              <p>Custom ergonomic board support with live layer visibility in the status bar.</p>
+              <p>Requires flashing the fork firmware</p>
               <div class="link-list">
                 <a href="https://svalboard.com">Visit svalboard.com</a>
                 <a href="https://github.com/nomisolutions/vial-qmk">Firmware fork on GitHub</a>
@@ -287,17 +302,10 @@
             <article class="supported-card">
               <div class="supported-card__topline">Supported keyboard</div>
               <h3>Moonlander</h3>
-              <p>Designed to work with Moonlander setups that expose layer state through QMK.</p>
+              <p>Works out of the box via the Oryx protocol, with no custom firmware flash required.</p>
               <div class="link-list">
                 <a href="https://www.zsa.io/moonlander">Visit zsa.io/moonlander</a>
-                <a href="https://github.com/nomisolutions/qmk_firmware">Firmware fork on GitHub</a>
               </div>
-            </article>
-            <article class="supported-card supported-card--firmware">
-              <div class="supported-card__topline">Firmware</div>
-              <h3>QMK-aware</h3>
-              <p>Klayi reads the active layer and current modifiers from supported firmware behavior over USB.</p>
-              <span class="supported-card__note">Specific support is limited to the keyboards listed above.</span>
             </article>
           </div>
         </section>
@@ -315,8 +323,7 @@
               <h3>Klayi overview on YouTube</h3>
               <p>
                 Open the current overview video to see how Klayi reports active
-                layers and modifiers in the macOS status bar, and to follow the
-                Moonlander flashing guide included in the walkthrough.
+                layers and modifiers in the macOS status bar.
               </p>
               <span class="video-card__link">Watch on YouTube</span>
             </div>
@@ -329,7 +336,7 @@
             <h2>No accounts, no analytics, no telemetry.</h2>
             <p>
               Klayi is a local macOS utility. It does not collect personal data,
-              run analytics, phone home for telemetry, or require an account to work.
+              run analytics, telemetry, or require an account to work.
             </p>
           </div>
           <div class="privacy-grid">

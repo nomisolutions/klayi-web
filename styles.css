@@ -458,6 +458,34 @@ h3 {
   color: var(--color-text-secondary);
 }
 
+.plugin-screenshots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.plugin-screenshot {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-card), var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}
+
+.plugin-screenshot img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.plugin-screenshot figcaption {
+  padding: var(--space-lg) var(--space-xl);
+  color: var(--color-text-secondary);
+}
+
 .section-heading {
   max-width: 44rem;
   margin-bottom: var(--space-xl);
@@ -472,7 +500,7 @@ h3 {
 }
 
 .feature-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .workflow-grid {
@@ -629,6 +657,7 @@ h3 {
   .feature-grid,
   .workflow-grid,
   .supported-grid,
+  .plugin-screenshots,
   .privacy-grid,
   .video-card,
   .support-panel,
